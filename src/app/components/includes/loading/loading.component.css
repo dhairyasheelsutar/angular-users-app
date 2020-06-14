@@ -1,0 +1,15 @@
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mx-auto {
+    display: flex;
+    justify-content: center;
+}
+
+.align-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh;
+}

@@ -1,0 +1,16 @@
+mat-form-field {
+    width: 100%;
+}
+
+.align-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh;
+    width: 25%;
+}
+
+.horizontal-center {
+    display: flex;
+    justify-content: center;
+}

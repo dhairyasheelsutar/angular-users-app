@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div *ngIf="users.length !== 0; else nodata">
+        <mat-grid-list cols="3" rowHeight="300px">
+            <mat-grid-tile *ngFor="let item of users">
+                <app-user 
+                    [id]="item.id" 
+                    [email]="item.email" 
+                    [firstName] = "item.first_name"
+                    [lastName] = "item.last_name"
+                    [avtar] = "item.avatar"
+                    (itemDeleted) = "itemDeleted($event)">
+                </app-user>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+    <div *ngFor="let index of totalPages" style="display: inline-block; margin: 10px">
+        <button (click)="updatePage(index)" mat-raised-button color="accent">{{ index }}</button>
+    </div>
+</div>
+<ng-template #nodata>
+    <app-loading></app-loading>
+</ng-template>
+

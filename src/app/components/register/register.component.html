@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+
+<div class="horizontal-center">
+    <div class="align-center">
+        <form>
+            <h1 class="text-center">Register</h1>
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter Firstname</mat-label>
+                    <input required type="text" name="firstName" [(ngModel)]="firstName" matInput placeholder="Enter Firstname">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter Lastname</mat-label>
+                    <input required type="text" name="lastName" [(ngModel)]="lastName" matInput placeholder="Enter Lastname">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter email</mat-label>
+                    <input required type="email" name="email" [(ngModel)]="email" matInput placeholder="Enter email">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter password</mat-label>
+                    <input required type="password" name="password" [(ngModel)]="password" matInput placeholder="Enter password">
+                </mat-form-field>
+            </div>
+            <div>
+                <button (click)="submitForm()" style="width: 100%;" mat-raised-button color="accent">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
